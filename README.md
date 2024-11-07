@@ -17,7 +17,23 @@ Este projeto gerencia categorias de produtos usando uma API REST com Spring Boot
 
 ### 2. Backend (API)
 1. Instale o **WAMP** (ou **XAMPP**) e inicie o **MySQL**.
-2. Crie um banco de dados chamado `lojinha` no **phpMyAdmin**.
+2. crie um db no mySql com o no
+3.
+ ```sql
+CREATE DATABASE IF NOT EXISTS produtos_db;
+USE produtos_db;
+
+CREATE TABLE categoria (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(255) NOT NULL
+);
+
+USE produtos_db;
+
+select * from categoria;
+
+```
+
 3. Configure o arquivo `application.properties` com as informações do banco de dados:
 
     ```properties
