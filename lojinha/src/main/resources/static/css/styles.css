@@ -1,0 +1,168 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Cabeçalho */
+h1 {
+    font-size: 2.5rem;
+    color: #2d3e50;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* Container de lista de categorias (Grid de cards) */
+#categorias-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsivo */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo dos itens de categoria (Cards) */
+.categorias {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px;
+}
+
+/* Efeito de hover nos cards */
+.categorias:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Título dentro dos cards */
+.categorias h2 {
+    font-size: 1.5rem;
+    color: #2d3e50;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Descrição dentro dos cards */
+.categorias p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* Botões de ação (editar e excluir) */
+.categorias a,
+.categorias button {
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: auto;
+    margin-right: 10px;
+}
+
+.categorias a:hover,
+.categorias button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Botão de excluir */
+.categorias button {
+    background-color: #dc3545;
+}
+
+.categorias button:hover {
+    background-color: #c82333;
+}
+
+/* Formulário */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+/* Estilo para rótulos e inputs no formulário */
+label {
+    font-size: 1rem;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Estilo para o link que parece um botão */
+a {
+    display: inline-block; /* Faz o link ser tratável como um bloco */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #ffffff; /* Cor do texto branca */
+    padding: 12px 25px; /* Espaçamento interno do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    border-radius: 6px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Efeito de hover para o botão */
+a:hover {
+    background-color: #0056b3; /* Cor mais escura quando passar o mouse */
+    transform: translateY(-2px); /* Leve elevação do botão */
+}
